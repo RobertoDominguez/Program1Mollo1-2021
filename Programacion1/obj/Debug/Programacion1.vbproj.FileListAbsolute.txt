@@ -1,0 +1,14 @@
+C:\Users\USER\source\repos\WindowsApp17\WindowsApp17\bin\Debug\WindowsApp17.exe.config
+C:\Users\USER\source\repos\WindowsApp17\WindowsApp17\bin\Debug\WindowsApp17.exe
+C:\Users\USER\source\repos\WindowsApp17\WindowsApp17\bin\Debug\WindowsApp17.pdb
+C:\Users\USER\source\repos\WindowsApp17\WindowsApp17\bin\Debug\WindowsApp17.xml
+C:\Users\USER\source\repos\WindowsApp17\WindowsApp17\obj\Debug\Programacion1.vbprojAssemblyReference.cache
+C:\Users\USER\source\repos\WindowsApp17\WindowsApp17\obj\Debug\WindowsApp17.Form1.resources
+C:\Users\USER\source\repos\WindowsApp17\WindowsApp17\obj\Debug\WindowsApp17.Resources.resources
+C:\Users\USER\source\repos\WindowsApp17\WindowsApp17\obj\Debug\WindowsApp17.Practico1Vectores.resources
+C:\Users\USER\source\repos\WindowsApp17\WindowsApp17\obj\Debug\WindowsApp17.Practico2Vectores.resources
+C:\Users\USER\source\repos\WindowsApp17\WindowsApp17\obj\Debug\Programacion1.vbproj.GenerateResource.cache
+C:\Users\USER\source\repos\WindowsApp17\WindowsApp17\obj\Debug\Programacion1.vbproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\WindowsApp17\WindowsApp17\obj\Debug\WindowsApp17.exe
+C:\Users\USER\source\repos\WindowsApp17\WindowsApp17\obj\Debug\WindowsApp17.xml
+C:\Users\USER\source\repos\WindowsApp17\WindowsApp17\obj\Debug\WindowsApp17.pdb
