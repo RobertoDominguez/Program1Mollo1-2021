@@ -28,6 +28,20 @@
         Next
     End Sub
 
+    Public Sub Cargar(dato As Integer)
+        n = n + 1
+        v(n) = dato
+    End Sub
+
+    Public Sub Cargar(pos As Integer, dato As Integer)
+
+        For i = n To pos Step -1
+            v(i + 1) = v(i)
+        Next
+        v(pos) = dato
+        n = n + 1
+    End Sub
+
     Public Sub Poner(indice As Integer, num As Integer)
         v(indice) = num
     End Sub
@@ -130,21 +144,7 @@
         R.n = ir
 
     End Sub
-    'clases de lunes 24 al miercoles 26'
-    '------------------columnas-------------------------------
-    Public Sub Cargar(dato As Integer)
-        n = n + 1
-        v(n) = dato
-    End Sub
 
-    Public Sub Cargar(pos As Integer, dato As Integer)
-
-        For i = n To pos Step -1
-            v(i + 1) = v(i)
-        Next
-        v(pos) = dato
-        n = n + 1
-    End Sub
     Public Function Descargar(i As Integer) As Integer
         Return v(i)
     End Function
