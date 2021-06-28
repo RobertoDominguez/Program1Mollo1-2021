@@ -6,6 +6,13 @@
         n = 0
     End Sub
 
+    Public Sub Vector(_n As Integer, v2() As Integer) 'constructor'
+        n = _n
+        For i = 1 To n
+            v(i) = v2(i)
+        Next
+    End Sub
+
     Public Sub Vaciar()
         n = 0
     End Sub
@@ -32,6 +39,21 @@
             v(i + 1) = data.Cells.Item(i).Value
         Next
     End Sub
+
+    Public Sub Cargar(dimension As Integer, data As DataGridViewRow) 'Por DataGridView Fila'
+        Dim i As Integer
+        n = dimension
+        For i = 0 To (n - 1)
+            v(i + 1) = data.Cells.Item(i).Value
+        Next
+    End Sub
+
+    Public Sub Descargar(data As DataGridViewRow) 'Por DataGridView Fila'
+        Dim i As Integer
+        For i = 0 To (n - 1)
+            data.Cells.Item(i).Value = v(i + 1)
+        Next
+    End Sub
     Public Function Descargar() As String
         Dim s As String
         Dim i As Integer
@@ -42,6 +64,14 @@
         Return s
 
     End Function
+
+    Public Sub Eliminar(pos As Integer)
+        n = n - 1
+        For i = pos To n
+            v(i) = v(i + 1)
+        Next
+    End Sub
+
     Public Function Acumular() As Integer
         Dim f As Integer
         Dim i As Integer
@@ -105,6 +135,15 @@
     Public Sub Cargar(dato As Integer)
         n = n + 1
         v(n) = dato
+    End Sub
+
+    Public Sub Cargar(pos As Integer, dato As Integer)
+
+        For i = n To pos Step -1
+            v(i + 1) = v(i)
+        Next
+        v(pos) = dato
+        n = n + 1
     End Sub
     Public Function Descargar(i As Integer) As Integer
         Return v(i)
@@ -415,4 +454,68 @@
 
     End Sub
 
+    Public Sub OrdenarEntreAyBBurbuja(a As Integer, b As Integer)
+        For i = a To b
+            For j = i To b
+                If (v(i) > v(j)) Then
+                    Dim aux = v(i)
+                    v(i) = v(j)
+                    v(j) = aux
+                End If
+            Next
+        Next
+    End Sub
+
+    Public Sub InsertarVectorEnPosicionP(v2 As Vector, p As Integer)
+        For i = v2.RetDim To 1 Step -1
+            Cargar(p, v2.Descargar(i))
+        Next
+    End Sub
+
+    Public Sub EliminarElementosEntreAYB(a As Integer, b As Integer)
+        For i = a To b
+            Eliminar(a)
+        Next
+    End Sub
+
+    Public Function ContarElementosDiferentesEntreAyB(a As Integer, b As Integer) As Integer
+        Dim contador As Integer
+        contador = 0
+        Dim v2 As Vector = New Vector()
+        v2.Vector(n, v)
+
+        v2.OrdenarEntreAyBBurbuja(a, b)
+        For i = a To b - 1
+            If (v2.Descargar(i) <> v2.Descargar(i + 1)) Then
+                contador = contador + 1
+            End If
+        Next
+        Return contador + 1
+    End Function
+
+    Public Function ElementoMenosRepetidoEntreAyB(a As Integer, b As Integer) As Integer
+        Dim contadorMenor, contador, elemento As Integer
+        contadorMenor = 9999
+        contador = 0
+        elemento = 0
+        Dim v2 As Vector = New Vector()
+        v2.Vector(n, v)
+
+        v2.OrdenarEntreAyBBurbuja(a, b)
+        For i = a To b - 1
+            For j = i To b - 1
+                If (v2.Descargar(i) = v2.Descargar(i + 1)) Then
+                    contador = contador + 1
+                End If
+            Next
+            contador = contador + 1
+            If ((v2.Descargar(i) <> v2.Descargar(i - 1)) And (contador < contadorMenor)) Then
+                contadorMenor = contador
+                elemento = v2.Descargar(i)
+            End If
+            contador = 0
+        Next
+
+        Return elemento
+    End Function
 End Class
