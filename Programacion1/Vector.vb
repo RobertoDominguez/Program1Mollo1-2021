@@ -518,4 +518,53 @@
 
         Return elemento
     End Function
+
+    Public Sub OrdenarPorMultiplos(m As Integer)
+        For i = 1 To n
+            For j = i To n
+                If ((i Mod m = 0) And (j Mod m = 0)) Then
+                    If (v(i) > v(j)) Then
+                        Dim aux = v(i)
+                        v(i) = v(j)
+                        v(j) = aux
+                    End If
+                End If
+            Next
+        Next
+    End Sub
+
+    Public Function EsUnico(posicion As Integer) As Boolean
+        Dim contador = 0
+
+        For i = 1 To n
+            If (v(posicion) = v(i)) Then
+                contador = contador + 1
+            End If
+        Next
+        Return contador = 1
+    End Function
+
+    Public Function EsUnicoEntreAyB(posicion As Integer, a As Integer, b As Integer) As Boolean
+        Dim contador = 0
+
+        For i = a To b
+            If (v(posicion) = v(i)) Then
+                contador = contador + 1
+            End If
+        Next
+        Return contador = 1
+    End Function
+
+    Public Sub EliminarElementosUnicosEntreAyB(a As Integer, b As Integer)
+        Dim contador = 0
+        For i = a To b
+            If (EsUnicoEntreAyB(i - contador, a, b - contador)) Then
+                Eliminar(i - contador)
+                contador = contador + 1
+            End If
+        Next
+    End Sub
+
+
+
 End Class

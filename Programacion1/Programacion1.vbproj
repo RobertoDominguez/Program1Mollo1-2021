@@ -74,12 +74,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NEtnt.vb" />
-    <Compile Include="Form1.vb">
+    <Compile Include="PrimerParcial.Designer.vb">
+      <DependentUpon>PrimerParcial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PrimerParcial.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="NEtnt.vb" />
+    <Compile Include="Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.vb">
+      <DependentUpon>Main.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -112,8 +118,8 @@
     <Compile Include="Vector.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Practico2Vectores.resx">
       <DependentUpon>Practico2Vectores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrimerParcial.resx">
+      <DependentUpon>PrimerParcial.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
