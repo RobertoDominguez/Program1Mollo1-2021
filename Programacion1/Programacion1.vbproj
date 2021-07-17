@@ -74,6 +74,13 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Matrices.Designer.vb">
+      <DependentUpon>Matrices.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Matrices.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Matriz.vb" />
     <Compile Include="PrimerParcial.Designer.vb">
       <DependentUpon>PrimerParcial.vb</DependentUpon>
     </Compile>
@@ -120,6 +127,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Matrices.resx">
+      <DependentUpon>Matrices.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

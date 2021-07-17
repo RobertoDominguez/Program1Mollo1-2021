@@ -27,3 +27,4 @@ C:\Users\USER\source\repos\Programacion1\Programacion1\obj\Debug\WindowsApp17.xm
 C:\Users\USER\source\repos\Programacion1\Programacion1\obj\Debug\WindowsApp17.pdb
 C:\Users\USER\source\repos\Programacion1\Programacion1\obj\Debug\WindowsApp17.Main.resources
 C:\Users\USER\source\repos\Programacion1\Programacion1\obj\Debug\WindowsApp17.PrimerParcial.resources
+C:\Users\USER\source\repos\Programacion1\Programacion1\obj\Debug\WindowsApp17.Matrices.resources
