@@ -35,16 +35,16 @@ Public Class NEnt
         Dim c As Integer 'contador'
         Dim r As Integer 'var auxiliar'
         Dim i As Integer 'variable de los ciclos'
+
+
         c = 0
         For i = 1 To n
             r = n Mod i
             If r = 0 Then
                 c = c + 1
-
             End If
         Next
-        Return c = 2
-
+        Return c <= 2
     End Function
     Public Function VerifPri1() As Boolean
         Dim r As Integer

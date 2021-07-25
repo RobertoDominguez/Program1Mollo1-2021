@@ -21,4 +21,17 @@
         matriz.CargarRandom(1, 20)
         matriz.descargar(DataGridView1)
     End Sub
+
+    Private Sub Ejercicio1ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Ejercicio1ToolStripMenuItem.Click
+        Label1.Text = matriz.Ejercicio1Practico1()
+    End Sub
+
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        matriz.cargarDesdeDataGrid(DataGridView1)
+    End Sub
+
+    Private Sub Ejercicio11ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Ejercicio11ToolStripMenuItem.Click
+        matriz.Ejercicio11Practico1()
+        matriz.descargar(DataGridView1)
+    End Sub
 End Class

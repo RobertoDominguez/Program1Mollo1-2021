@@ -167,4 +167,43 @@
         Next
     End Sub
 
+    Public Function Ejercicio1Practico1()
+        Dim resultado As Double
+        Dim restando = True
+        resultado = 0
+
+        For i = f To 1 Step -1
+            For j = c To 1 Step -1
+                Dim num As NEnt = New NEnt
+                num.Cargar(x(i, j))
+
+                If (num.VerifPri) Then
+                    If (restando) Then
+                        resultado = resultado - Math.Sqrt(num.Descargar)
+                        restando = False
+                    Else
+                        resultado = resultado + Math.Sqrt(num.Descargar)
+                        restando = True
+                    End If
+
+                End If
+            Next
+        Next
+
+        Return resultado
+    End Function
+
+    Public Sub Ejercicio11Practico1()
+
+        Dim contador = 0
+
+        For j = c To 1 Step -1
+            For i = f To 1 Step -1
+                contador = contador + 1
+                x(i, j) = contador
+            Next
+        Next
+
+    End Sub
+
 End Class
