@@ -206,4 +206,52 @@
 
     End Sub
 
+    Public Function SumaTriangularSup()
+        Dim suma = 0
+
+        For i = 1 To f
+            For j = 1 To c
+                If (i <= j) Then
+                    suma = suma + x(i, j)
+                End If
+            Next
+        Next
+        Return suma
+    End Function
+
+    Public Function SumaParesTriangularSup()
+        Dim suma = 0
+
+        For i = 1 To f
+            For j = 1 To c
+                If (i <= j) Then
+                    If (x(i, j) Mod 2 = 0) Then
+                        suma = suma + x(i, j)
+                    End If
+                End If
+            Next
+        Next
+        Return suma
+    End Function
+
+    Public Sub OrdenarTriangularSuperior()
+        For it = 1 To f
+            For jt = 1 To c
+                If (it <= jt) Then
+                    For i = it To f
+                        For j = jt To c
+                            If (i <= j) Then
+                                If (x(it, jt) > x(i, j)) Then
+                                    Dim aux = x(i, j)
+                                    x(i, j) = x(it, jt)
+                                    x(it, jt) = aux
+                                End If
+                            End If
+                        Next
+                    Next
+                End If
+            Next
+        Next
+    End Sub
+
 End Class

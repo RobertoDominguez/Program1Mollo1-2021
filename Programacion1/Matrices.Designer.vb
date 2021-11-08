@@ -45,6 +45,8 @@ Partial Class Matrices
         Me.Ejercicio9ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Ejercicio10ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Ejercicio11ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EjerciciosExtraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OrdenarTriSupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip2.SuspendLayout()
         Me.SuspendLayout()
@@ -140,7 +142,7 @@ Partial Class Matrices
         'MenuStrip2
         '
         Me.MenuStrip2.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Practico1MatricesToolStripMenuItem})
+        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Practico1MatricesToolStripMenuItem, Me.EjerciciosExtraToolStripMenuItem})
         Me.MenuStrip2.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip2.Name = "MenuStrip2"
         Me.MenuStrip2.Size = New System.Drawing.Size(1305, 28)
@@ -157,7 +159,7 @@ Partial Class Matrices
         'Ejercicio1ToolStripMenuItem
         '
         Me.Ejercicio1ToolStripMenuItem.Name = "Ejercicio1ToolStripMenuItem"
-        Me.Ejercicio1ToolStripMenuItem.Size = New System.Drawing.Size(156, 26)
+        Me.Ejercicio1ToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.Ejercicio1ToolStripMenuItem.Text = "Ejercicio1"
         '
         'Ejercicio2ToolStripMenuItem
@@ -220,6 +222,19 @@ Partial Class Matrices
         Me.Ejercicio11ToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.Ejercicio11ToolStripMenuItem.Text = "Ejercicio11"
         '
+        'EjerciciosExtraToolStripMenuItem
+        '
+        Me.EjerciciosExtraToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OrdenarTriSupToolStripMenuItem})
+        Me.EjerciciosExtraToolStripMenuItem.Name = "EjerciciosExtraToolStripMenuItem"
+        Me.EjerciciosExtraToolStripMenuItem.Size = New System.Drawing.Size(118, 24)
+        Me.EjerciciosExtraToolStripMenuItem.Text = "EjerciciosExtra"
+        '
+        'OrdenarTriSupToolStripMenuItem
+        '
+        Me.OrdenarTriSupToolStripMenuItem.Name = "OrdenarTriSupToolStripMenuItem"
+        Me.OrdenarTriSupToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.OrdenarTriSupToolStripMenuItem.Text = "OrdenarTriSup"
+        '
         'Matrices
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -270,4 +285,6 @@ Partial Class Matrices
     Friend WithEvents Ejercicio9ToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Ejercicio10ToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Ejercicio11ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EjerciciosExtraToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OrdenarTriSupToolStripMenuItem As ToolStripMenuItem
 End Class

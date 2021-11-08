@@ -34,4 +34,9 @@
         matriz.Ejercicio11Practico1()
         matriz.descargar(DataGridView1)
     End Sub
+
+    Private Sub OrdenarTriSupToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OrdenarTriSupToolStripMenuItem.Click
+        matriz.OrdenarTriangularSuperior()
+        matriz.descargar(DataGridView1)
+    End Sub
 End Class
